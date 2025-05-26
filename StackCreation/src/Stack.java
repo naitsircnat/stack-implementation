@@ -1,8 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
 
-
-public class Stack {
+public class Stack <T> {
   /*
    methods needed: push, pop, peek(), size();
    Use arraylist as a member variable
@@ -12,29 +11,29 @@ public class Stack {
    - size: use .size();
 
    - Time complexity?
-
+  
    Other improvements/follow-ups:
    - Try using generics too
    */
 
-   List<Integer>arrList=new ArrayList<>();
+   List<T>arrList=new ArrayList<>();
 
    public Stack(){
     arrList=new ArrayList<>();
 
    }
 
-   public void push(int item){
+   public void push(T item){
     arrList.add(item);
    }
 
-   public int peek(){
+   public T peek(){
     return arrList.get(arrList.size()-1);
    }
 
-   public int pop(){
+   public T pop(){
     
-     int toBePopped=arrList.get(arrList.size()-1);
+     T toBePopped=arrList.get(arrList.size()-1);
     
      arrList.remove(arrList.size()-1);
 

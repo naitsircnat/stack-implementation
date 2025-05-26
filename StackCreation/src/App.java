@@ -1,26 +1,21 @@
-
-
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
 
-        Stack st=new Stack();
-        
-        st.push(1);
-        st.push(2);
-        st.push(3);
-        st.push(4);
+        Stack<String>st=new Stack<>();
 
-        System.out.println(st.pop()); 
+        st.push("hello");
+        st.push("my");
+        st.push("name");
+        st.push("is");
+        st.push("Cristian");
 
-        System.out.println(st.size()); 
+        System.out.println(st.size());
 
-        System.out.println(st.pop()); 
+        int stSize=st.size();
 
-        System.out.println(st.peek()); 
-
-        System.out.println(st.size()); 
-
-
+        for (int i=0; i<stSize; i++){
+            // System.out.println(i);
+            System.out.println(st.pop());
+        }
     }
 }
